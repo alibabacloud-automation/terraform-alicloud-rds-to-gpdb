@@ -66,30 +66,42 @@ variable "vs_cidr_block" {
 
 variable "gpdb_engine_version" {
   description = "The engine version type of GPDB."
+  type        = string
   default     = "6.0"
+}
+
+variable "gpdb_db_instance_mode" {
+  description = "The db instance mode type of GPDB."
+  type        = string
+  default     = "StorageElastic"
 }
 
 variable "instance_spec" {
   description = "The instance spec type of GPDB."
+  type        = string
   default     = "2C16G"
 }
 
 variable "payment_type" {
   description = "The payment type type of GPDB."
+  type        = string
   default     = "PayAsYouGo"
 }
 
 variable "storage_size" {
   description = "The storage size type of GPDB."
+  type        = number
   default     = 50
 }
 
 variable "seg_node_num" {
   description = "The seg node num type of GPDB."
+  type        = number
   default     = 4
 }
 
 variable "seg_storage_type" {
   description = "The seg storage type of GPDB."
+  type        = string
   default     = "cloud_essd"
 }
